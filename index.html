@@ -109,6 +109,40 @@
             -webkit-text-fill-color: transparent;
         }
 
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Landing Page Preview Button */
+        .preview-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            color: var(--dark-bg);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: var(--transition);
+            box-shadow: 0 5px 20px rgba(127, 231, 220, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            white-space: nowrap;
+        }
+
+        .preview-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(127, 231, 220, 0.4), 0 0 20px rgba(127, 231, 220, 0.3);
+            color: var(--dark-bg);
+        }
+
+        .preview-btn i {
+            font-size: 16px;
+        }
+
         .construction-area {
             display: flex;
             flex-direction: column;
@@ -716,6 +750,18 @@
                 text-align: center;
             }
             
+            .header-right {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+            }
+            
+            .preview-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 14px 20px;
+            }
+            
             .construction-icon {
                 width: 140px;
                 height: 140px;
@@ -809,10 +855,17 @@
                     <div class="logo-icon">N</div>
                     <div class="logo-text">Navmenta</div>
                 </div>
-                <div class="status">
-                    <div class="status-indicator">
-                        <div class="status-dot"></div>
-                        <span>Launching March 2026</span>
+                <div class="header-right">
+                    <!-- NEW: Landing Page Preview Button -->
+                    <a href="landing_page.html" class="preview-btn">
+                        <i class="fas fa-eye"></i>
+                        <span>Preview Landing Page</span>
+                    </a>
+                    <div class="status">
+                        <div class="status-indicator">
+                            <div class="status-dot"></div>
+                            <span>Launching March 2026</span>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -859,6 +912,15 @@
                         <div class="countdown-value" id="seconds">00</div>
                         <div class="countdown-label">Seconds</div>
                     </div>
+                </div>
+                
+                <!-- Additional preview button in main content area -->
+                <div style="margin: 30px 0;">
+                    <a href="landing_page.html" class="preview-btn" style="background: linear-gradient(135deg, var(--tertiary), var(--secondary)); padding: 15px 30px; font-size: 16px;">
+                        <i class="fas fa-desktop"></i>
+                        <span>See What We're Building</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
                 
                 <div class="features-section">
